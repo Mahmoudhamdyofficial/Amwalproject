@@ -30,6 +30,7 @@ function Form3() {
         setData({ ...Data, ...data });
         navigate('/form4');
     }
+    console.log(Data);
     function isDateAtLeast18YearsOld(date) {
         const today = new Date();
         const selectedDate = new Date(date);

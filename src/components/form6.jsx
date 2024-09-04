@@ -15,7 +15,7 @@ function Form6() {
         setData({ ...Data, ...data });
         navigate('/form7');
     }
-    
+
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" })
 
     const navigate = useNavigate();
@@ -40,7 +40,7 @@ function Form6() {
                         <div className="mb-3">
                             <label htmlFor="date" className="form-label text-muted font">{language == "en" ? Strings.form6.Occupation.en : Strings.form6.Occupation.ar} <span className='required'>*</span></label>
                             <select id="departments" name="departments" className="form-color"
-                            {...register('Occupation', { required: true })}>
+                                {...register('Occupation', { required: true })}>
                                 {Arrays.departments.map((dep, index) => (
                                     <option key={index} value={dep}>
                                         {dep}
@@ -52,8 +52,15 @@ function Form6() {
                         <div className="mb-3">
                             <label htmlFor="Income" className="form-label text-muted font">{language == "en" ? Strings.form6.MonthlyIncome.en : Strings.form6.MonthlyIncome.ar}<span className='required'>*</span></label>
                             <input type="number" className="form-color" id="Income" placeholder={language == "en" ? Strings.form6.Placehold.en : Strings.form6.Placehold.ar}
-                                {...register('MonthlyIncome', { required: true })} />
+                                {...register('MonthlyIncome', {
+                                    required: true, validate: value => {
+                                        const numValue = value.replace(/\D/g, '');
+                                        return numValue.length >= 4 || "Minimum length is 4 digits";
+                                    }
+                                })} />
                             {errors.MonthlyIncome?.type == "required" && <p className='err'>Note: The field is required.</p>}
+                            {errors.MonthlyIncome?.type == "validate" && <p className='err'>Note: should enter 4 numbers minemum.</p>}
+
 
                         </div>
                         <div className='d-flex justify-content-end'>
