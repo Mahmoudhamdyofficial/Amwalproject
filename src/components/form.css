@@ -1,0 +1,146 @@
+* {
+    font-family: 'myfont';
+}
+
+.main-text {
+    font-size: 18px;
+    color: rgb(19, 145, 206);
+    padding: 10px 3px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin: 0px 20px;
+    font-family: 'myfont';
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.required {
+    color: red;
+}
+
+.form-color {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc ;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0 !important;
+}
+
+.form-color:focus {
+    border-color: #007bff !important;
+    outline: none;
+}
+
+.imageLogo {
+    width: 75%;
+}
+
+.backbutton {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid rgb(219, 212, 212);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.next-button {
+    padding: 10px 15px;
+    background-color: rgb(23, 127, 226);
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgb(23, 127, 226);
+
+}
+
+.font {
+    font-size: 14px;
+}
+
+.step {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.sub-button {
+    padding: 10px 135px;
+    background-color: rgb(23, 127, 226);
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid rgb(23, 127, 226);
+    margin-right: 20px;
+    transition: background-color .3s ease, border-color 2s ease;
+
+}
+
+.sub-button:hover {
+    background-color: rgb(117, 191, 70);
+    border-color: rgb(117, 191, 70);
+}
+
+.input-textu {
+    padding-bottom: 80px;
+}
+
+.btn-check+.btn {
+    padding: 6px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin: 10px;
+    color: rgb(126, 123, 123);
+}
+
+.btn-check:checked+.btn {
+    background-color: rgb(218, 236, 248);
+    color: white;
+    border-color: #ffffff;
+}
+.btn-outline-primary:hover {
+    background-color:  rgb(218, 236, 248);
+    color: white;
+}
+.err{
+    font-size: 13px;
+    color:red;
+}
+.terms-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    color: #757575; /* Light grey color for the text */
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .circle-check {
+    width: 60px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #007bff; /* Blue color for the filled circle */
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .circle-check::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: white; /* White color for the inner dot */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .terms-content p {
+    margin: 0;
+  }
