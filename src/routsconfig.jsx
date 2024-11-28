@@ -1,5 +1,4 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Applayout from './components/applayout/applayout';
 import Formone from './components/formone';
 import Form2 from './components/form2';
 import Form3 from './components/form3';
